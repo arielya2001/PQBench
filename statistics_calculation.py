@@ -30,7 +30,6 @@ for label, group in df.groupby("label"):
         times = [pkt[2] for pkt in row[packet_cols]]
         iats = np.diff(times)
         all_IATs.extend(iats)
-        "test2"
 
         # Client Hello = packet index 3
         CH_sizes.append(row["3"][1])
