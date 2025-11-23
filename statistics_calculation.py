@@ -50,7 +50,7 @@ for label, group in df.groupby("label"):
         "std_SH": np.std(SH_sizes),
     })
 
-# ====== 4. ייצוא לקובץ ======
+# ====== 4. ייצוא לקובץ =====
 out_df = pd.DataFrame(results)
 out_df = out_df.sort_values("label")
 
