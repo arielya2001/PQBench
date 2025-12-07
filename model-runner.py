@@ -37,7 +37,7 @@ def load_data(target: str, file: int) -> tuple:
     :return: Tuple (data, labels) where data is a numpy array and labels is another numpy array.
     """
     # Read CSV and drop unnamed column
-    data = pd.read_csv(f'all-files-with-100-pcaps-with-{file}-packets.csv')
+    data = pd.read_csv(f'dataset-100-pcaps-{file}-packets.csv')
     #data = data.drop(columns=['Unnamed: 0'])
 
     # Separate labels and convert to numpy
