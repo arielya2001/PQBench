@@ -1,0 +1,926 @@
+{
+  "input": "/output/210/session-2025-11-08_14-06-09/raw-172.18.0.6.pcap",
+  "min_packets": 30,
+  "require_serverhello": true,
+  "require_appdata": false,
+  "force_tls_port": "443",
+  "steps": [
+    {
+      "name": "decode-as",
+      "args": [
+        "-d",
+        "tcp.port==443,ssl"
+      ]
+    },
+    {
+      "name": "cmd_clienthellos",
+      "cmd": [
+        "tshark",
+        "-r",
+        "/output/210/session-2025-11-08_14-06-09/raw-172.18.0.6.pcap",
+        "-d",
+        "tcp.port==443,ssl",
+        "-Y",
+        "tls.handshake.type==1",
+        "-T",
+        "fields",
+        "-e",
+        "tcp.stream"
+      ]
+    },
+    {
+      "name": "clienthello_streams",
+      "count": 162,
+      "sample": [
+        "0",
+        "1",
+        "10",
+        "101",
+        "102",
+        "104",
+        "105",
+        "106",
+        "107",
+        "108",
+        "109",
+        "11",
+        "110",
+        "112",
+        "114",
+        "115",
+        "116",
+        "117",
+        "118",
+        "119",
+        "12",
+        "121",
+        "122",
+        "123",
+        "125",
+        "126",
+        "127",
+        "128",
+        "129",
+        "13",
+        "130",
+        "132",
+        "133",
+        "134",
+        "136",
+        "137",
+        "138",
+        "139",
+        "14",
+        "140",
+        "141",
+        "143",
+        "144",
+        "145",
+        "146",
+        "148",
+        "149",
+        "15",
+        "150",
+        "151"
+      ]
+    }
+  ],
+  "kept": [
+    {
+      "sid": "0",
+      "pkt_count": 94
+    },
+    {
+      "sid": "1",
+      "pkt_count": 94
+    },
+    {
+      "sid": "10",
+      "pkt_count": 100
+    },
+    {
+      "sid": "101",
+      "pkt_count": 95
+    },
+    {
+      "sid": "104",
+      "pkt_count": 99
+    },
+    {
+      "sid": "105",
+      "pkt_count": 96
+    },
+    {
+      "sid": "106",
+      "pkt_count": 93
+    },
+    {
+      "sid": "108",
+      "pkt_count": 105
+    },
+    {
+      "sid": "109",
+      "pkt_count": 90
+    },
+    {
+      "sid": "112",
+      "pkt_count": 94
+    },
+    {
+      "sid": "114",
+      "pkt_count": 97
+    },
+    {
+      "sid": "116",
+      "pkt_count": 94
+    },
+    {
+      "sid": "118",
+      "pkt_count": 89
+    },
+    {
+      "sid": "12",
+      "pkt_count": 96
+    },
+    {
+      "sid": "121",
+      "pkt_count": 94
+    },
+    {
+      "sid": "123",
+      "pkt_count": 94
+    },
+    {
+      "sid": "125",
+      "pkt_count": 94
+    },
+    {
+      "sid": "126",
+      "pkt_count": 97
+    },
+    {
+      "sid": "128",
+      "pkt_count": 99
+    },
+    {
+      "sid": "130",
+      "pkt_count": 94
+    },
+    {
+      "sid": "132",
+      "pkt_count": 92
+    },
+    {
+      "sid": "134",
+      "pkt_count": 93
+    },
+    {
+      "sid": "136",
+      "pkt_count": 94
+    },
+    {
+      "sid": "139",
+      "pkt_count": 100
+    },
+    {
+      "sid": "14",
+      "pkt_count": 98
+    },
+    {
+      "sid": "140",
+      "pkt_count": 98
+    },
+    {
+      "sid": "143",
+      "pkt_count": 97
+    },
+    {
+      "sid": "145",
+      "pkt_count": 96
+    },
+    {
+      "sid": "148",
+      "pkt_count": 95
+    },
+    {
+      "sid": "150",
+      "pkt_count": 102
+    },
+    {
+      "sid": "151",
+      "pkt_count": 96
+    },
+    {
+      "sid": "154",
+      "pkt_count": 95
+    },
+    {
+      "sid": "156",
+      "pkt_count": 90
+    },
+    {
+      "sid": "159",
+      "pkt_count": 96
+    },
+    {
+      "sid": "162",
+      "pkt_count": 92
+    },
+    {
+      "sid": "163",
+      "pkt_count": 101
+    },
+    {
+      "sid": "164",
+      "pkt_count": 94
+    },
+    {
+      "sid": "167",
+      "pkt_count": 95
+    },
+    {
+      "sid": "168",
+      "pkt_count": 98
+    },
+    {
+      "sid": "169",
+      "pkt_count": 99
+    },
+    {
+      "sid": "17",
+      "pkt_count": 90
+    },
+    {
+      "sid": "171",
+      "pkt_count": 98
+    },
+    {
+      "sid": "173",
+      "pkt_count": 101
+    },
+    {
+      "sid": "175",
+      "pkt_count": 93
+    },
+    {
+      "sid": "176",
+      "pkt_count": 96
+    },
+    {
+      "sid": "179",
+      "pkt_count": 95
+    },
+    {
+      "sid": "183",
+      "pkt_count": 97
+    },
+    {
+      "sid": "185",
+      "pkt_count": 100
+    },
+    {
+      "sid": "188",
+      "pkt_count": 92
+    },
+    {
+      "sid": "19",
+      "pkt_count": 97
+    },
+    {
+      "sid": "190",
+      "pkt_count": 99
+    },
+    {
+      "sid": "193",
+      "pkt_count": 97
+    },
+    {
+      "sid": "21",
+      "pkt_count": 95
+    },
+    {
+      "sid": "22",
+      "pkt_count": 105
+    },
+    {
+      "sid": "24",
+      "pkt_count": 99
+    },
+    {
+      "sid": "26",
+      "pkt_count": 98
+    },
+    {
+      "sid": "29",
+      "pkt_count": 90
+    },
+    {
+      "sid": "3",
+      "pkt_count": 92
+    },
+    {
+      "sid": "31",
+      "pkt_count": 93
+    },
+    {
+      "sid": "33",
+      "pkt_count": 96
+    },
+    {
+      "sid": "35",
+      "pkt_count": 98
+    },
+    {
+      "sid": "37",
+      "pkt_count": 91
+    },
+    {
+      "sid": "38",
+      "pkt_count": 97
+    },
+    {
+      "sid": "40",
+      "pkt_count": 97
+    },
+    {
+      "sid": "41",
+      "pkt_count": 91
+    },
+    {
+      "sid": "43",
+      "pkt_count": 91
+    },
+    {
+      "sid": "44",
+      "pkt_count": 92
+    },
+    {
+      "sid": "46",
+      "pkt_count": 95
+    },
+    {
+      "sid": "48",
+      "pkt_count": 87
+    },
+    {
+      "sid": "5",
+      "pkt_count": 99
+    },
+    {
+      "sid": "50",
+      "pkt_count": 94
+    },
+    {
+      "sid": "51",
+      "pkt_count": 92
+    },
+    {
+      "sid": "53",
+      "pkt_count": 94
+    },
+    {
+      "sid": "55",
+      "pkt_count": 95
+    },
+    {
+      "sid": "58",
+      "pkt_count": 99
+    },
+    {
+      "sid": "6",
+      "pkt_count": 96
+    },
+    {
+      "sid": "60",
+      "pkt_count": 92
+    },
+    {
+      "sid": "61",
+      "pkt_count": 97
+    },
+    {
+      "sid": "63",
+      "pkt_count": 93
+    },
+    {
+      "sid": "64",
+      "pkt_count": 96
+    },
+    {
+      "sid": "67",
+      "pkt_count": 92
+    },
+    {
+      "sid": "69",
+      "pkt_count": 100
+    },
+    {
+      "sid": "70",
+      "pkt_count": 92
+    },
+    {
+      "sid": "71",
+      "pkt_count": 91
+    },
+    {
+      "sid": "72",
+      "pkt_count": 95
+    },
+    {
+      "sid": "74",
+      "pkt_count": 98
+    },
+    {
+      "sid": "76",
+      "pkt_count": 98
+    },
+    {
+      "sid": "78",
+      "pkt_count": 99
+    },
+    {
+      "sid": "8",
+      "pkt_count": 92
+    },
+    {
+      "sid": "80",
+      "pkt_count": 100
+    },
+    {
+      "sid": "82",
+      "pkt_count": 95
+    },
+    {
+      "sid": "84",
+      "pkt_count": 100
+    },
+    {
+      "sid": "86",
+      "pkt_count": 99
+    },
+    {
+      "sid": "87",
+      "pkt_count": 100
+    },
+    {
+      "sid": "88",
+      "pkt_count": 103
+    },
+    {
+      "sid": "90",
+      "pkt_count": 94
+    },
+    {
+      "sid": "92",
+      "pkt_count": 96
+    },
+    {
+      "sid": "95",
+      "pkt_count": 99
+    },
+    {
+      "sid": "97",
+      "pkt_count": 96
+    },
+    {
+      "sid": "99",
+      "pkt_count": 92
+    }
+  ],
+  "dropped": [
+    {
+      "sid": "102",
+      "pkt_count": 20,
+      "reasons": [
+        "too_few_packets(20)"
+      ]
+    },
+    {
+      "sid": "107",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "11",
+      "pkt_count": 23,
+      "reasons": [
+        "too_few_packets(23)"
+      ]
+    },
+    {
+      "sid": "110",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "115",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "117",
+      "pkt_count": 21,
+      "reasons": [
+        "too_few_packets(21)"
+      ]
+    },
+    {
+      "sid": "119",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "122",
+      "pkt_count": 21,
+      "reasons": [
+        "too_few_packets(21)"
+      ]
+    },
+    {
+      "sid": "127",
+      "pkt_count": 21,
+      "reasons": [
+        "too_few_packets(21)"
+      ]
+    },
+    {
+      "sid": "129",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "13",
+      "pkt_count": 20,
+      "reasons": [
+        "too_few_packets(20)"
+      ]
+    },
+    {
+      "sid": "133",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "137",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "138",
+      "pkt_count": 21,
+      "reasons": [
+        "too_few_packets(21)"
+      ]
+    },
+    {
+      "sid": "141",
+      "pkt_count": 20,
+      "reasons": [
+        "too_few_packets(20)"
+      ]
+    },
+    {
+      "sid": "144",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "146",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "149",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "15",
+      "pkt_count": 21,
+      "reasons": [
+        "too_few_packets(21)"
+      ]
+    },
+    {
+      "sid": "152",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "155",
+      "pkt_count": 11,
+      "reasons": [
+        "too_few_packets(11)"
+      ]
+    },
+    {
+      "sid": "157",
+      "pkt_count": 20,
+      "reasons": [
+        "too_few_packets(20)"
+      ]
+    },
+    {
+      "sid": "160",
+      "pkt_count": 21,
+      "reasons": [
+        "too_few_packets(21)"
+      ]
+    },
+    {
+      "sid": "165",
+      "pkt_count": 20,
+      "reasons": [
+        "too_few_packets(20)"
+      ]
+    },
+    {
+      "sid": "170",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "172",
+      "pkt_count": 20,
+      "reasons": [
+        "too_few_packets(20)"
+      ]
+    },
+    {
+      "sid": "174",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "178",
+      "pkt_count": 12,
+      "reasons": [
+        "too_few_packets(12)"
+      ]
+    },
+    {
+      "sid": "18",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "180",
+      "pkt_count": 23,
+      "reasons": [
+        "too_few_packets(23)"
+      ]
+    },
+    {
+      "sid": "182",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "186",
+      "pkt_count": 21,
+      "reasons": [
+        "too_few_packets(21)"
+      ]
+    },
+    {
+      "sid": "191",
+      "pkt_count": 18,
+      "reasons": [
+        "too_few_packets(18)"
+      ]
+    },
+    {
+      "sid": "192",
+      "pkt_count": 11,
+      "reasons": [
+        "too_few_packets(11)"
+      ]
+    },
+    {
+      "sid": "195",
+      "pkt_count": 12,
+      "reasons": [
+        "too_few_packets(12)"
+      ]
+    },
+    {
+      "sid": "2",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "20",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "23",
+      "pkt_count": 21,
+      "reasons": [
+        "too_few_packets(21)"
+      ]
+    },
+    {
+      "sid": "25",
+      "pkt_count": 21,
+      "reasons": [
+        "too_few_packets(21)"
+      ]
+    },
+    {
+      "sid": "30",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "34",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "36",
+      "pkt_count": 21,
+      "reasons": [
+        "too_few_packets(21)"
+      ]
+    },
+    {
+      "sid": "39",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "42",
+      "pkt_count": 21,
+      "reasons": [
+        "too_few_packets(21)"
+      ]
+    },
+    {
+      "sid": "45",
+      "pkt_count": 21,
+      "reasons": [
+        "too_few_packets(21)"
+      ]
+    },
+    {
+      "sid": "49",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "52",
+      "pkt_count": 21,
+      "reasons": [
+        "too_few_packets(21)"
+      ]
+    },
+    {
+      "sid": "54",
+      "pkt_count": 23,
+      "reasons": [
+        "too_few_packets(23)"
+      ]
+    },
+    {
+      "sid": "56",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "57",
+      "pkt_count": 13,
+      "reasons": [
+        "too_few_packets(13)"
+      ]
+    },
+    {
+      "sid": "59",
+      "pkt_count": 19,
+      "reasons": [
+        "too_few_packets(19)"
+      ]
+    },
+    {
+      "sid": "62",
+      "pkt_count": 20,
+      "reasons": [
+        "too_few_packets(20)"
+      ]
+    },
+    {
+      "sid": "68",
+      "pkt_count": 20,
+      "reasons": [
+        "too_few_packets(20)"
+      ]
+    },
+    {
+      "sid": "7",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "73",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "75",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "81",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "85",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "89",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "9",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    },
+    {
+      "sid": "94",
+      "pkt_count": 12,
+      "reasons": [
+        "too_few_packets(12)"
+      ]
+    },
+    {
+      "sid": "96",
+      "pkt_count": 22,
+      "reasons": [
+        "too_few_packets(22)"
+      ]
+    }
+  ]
+}

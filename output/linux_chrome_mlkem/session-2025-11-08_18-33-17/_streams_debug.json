@@ -1,0 +1,506 @@
+{
+  "input": "/output/122/session-2025-11-08_18-33-17/raw-172.18.0.4.pcap",
+  "min_packets": 30,
+  "require_serverhello": true,
+  "require_appdata": false,
+  "force_tls_port": "443",
+  "steps": [
+    {
+      "name": "decode-as",
+      "args": [
+        "-d",
+        "tcp.port==443,ssl"
+      ]
+    },
+    {
+      "name": "cmd_clienthellos",
+      "cmd": [
+        "tshark",
+        "-r",
+        "/output/122/session-2025-11-08_18-33-17/raw-172.18.0.4.pcap",
+        "-d",
+        "tcp.port==443,ssl",
+        "-Y",
+        "tls.handshake.type==1",
+        "-T",
+        "fields",
+        "-e",
+        "tcp.stream"
+      ]
+    },
+    {
+      "name": "clienthello_streams",
+      "count": 102,
+      "sample": [
+        "0",
+        "1",
+        "10",
+        "100",
+        "101",
+        "102",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "2",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "3",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "4",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "5",
+        "50"
+      ]
+    }
+  ],
+  "kept": [
+    {
+      "sid": "0",
+      "pkt_count": 96
+    },
+    {
+      "sid": "1",
+      "pkt_count": 97
+    },
+    {
+      "sid": "10",
+      "pkt_count": 96
+    },
+    {
+      "sid": "100",
+      "pkt_count": 92
+    },
+    {
+      "sid": "101",
+      "pkt_count": 92
+    },
+    {
+      "sid": "102",
+      "pkt_count": 88
+    },
+    {
+      "sid": "11",
+      "pkt_count": 90
+    },
+    {
+      "sid": "12",
+      "pkt_count": 96
+    },
+    {
+      "sid": "13",
+      "pkt_count": 90
+    },
+    {
+      "sid": "14",
+      "pkt_count": 94
+    },
+    {
+      "sid": "15",
+      "pkt_count": 94
+    },
+    {
+      "sid": "16",
+      "pkt_count": 104
+    },
+    {
+      "sid": "17",
+      "pkt_count": 100
+    },
+    {
+      "sid": "18",
+      "pkt_count": 90
+    },
+    {
+      "sid": "19",
+      "pkt_count": 94
+    },
+    {
+      "sid": "2",
+      "pkt_count": 92
+    },
+    {
+      "sid": "20",
+      "pkt_count": 95
+    },
+    {
+      "sid": "21",
+      "pkt_count": 93
+    },
+    {
+      "sid": "22",
+      "pkt_count": 95
+    },
+    {
+      "sid": "23",
+      "pkt_count": 93
+    },
+    {
+      "sid": "24",
+      "pkt_count": 85
+    },
+    {
+      "sid": "25",
+      "pkt_count": 99
+    },
+    {
+      "sid": "26",
+      "pkt_count": 103
+    },
+    {
+      "sid": "27",
+      "pkt_count": 94
+    },
+    {
+      "sid": "28",
+      "pkt_count": 91
+    },
+    {
+      "sid": "29",
+      "pkt_count": 103
+    },
+    {
+      "sid": "3",
+      "pkt_count": 93
+    },
+    {
+      "sid": "30",
+      "pkt_count": 95
+    },
+    {
+      "sid": "31",
+      "pkt_count": 94
+    },
+    {
+      "sid": "32",
+      "pkt_count": 96
+    },
+    {
+      "sid": "33",
+      "pkt_count": 97
+    },
+    {
+      "sid": "34",
+      "pkt_count": 93
+    },
+    {
+      "sid": "35",
+      "pkt_count": 91
+    },
+    {
+      "sid": "36",
+      "pkt_count": 100
+    },
+    {
+      "sid": "37",
+      "pkt_count": 98
+    },
+    {
+      "sid": "38",
+      "pkt_count": 91
+    },
+    {
+      "sid": "39",
+      "pkt_count": 86
+    },
+    {
+      "sid": "4",
+      "pkt_count": 101
+    },
+    {
+      "sid": "40",
+      "pkt_count": 89
+    },
+    {
+      "sid": "41",
+      "pkt_count": 96
+    },
+    {
+      "sid": "42",
+      "pkt_count": 96
+    },
+    {
+      "sid": "43",
+      "pkt_count": 101
+    },
+    {
+      "sid": "44",
+      "pkt_count": 106
+    },
+    {
+      "sid": "45",
+      "pkt_count": 99
+    },
+    {
+      "sid": "46",
+      "pkt_count": 92
+    },
+    {
+      "sid": "47",
+      "pkt_count": 103
+    },
+    {
+      "sid": "48",
+      "pkt_count": 89
+    },
+    {
+      "sid": "49",
+      "pkt_count": 89
+    },
+    {
+      "sid": "5",
+      "pkt_count": 100
+    },
+    {
+      "sid": "50",
+      "pkt_count": 96
+    },
+    {
+      "sid": "51",
+      "pkt_count": 97
+    },
+    {
+      "sid": "52",
+      "pkt_count": 97
+    },
+    {
+      "sid": "53",
+      "pkt_count": 95
+    },
+    {
+      "sid": "54",
+      "pkt_count": 92
+    },
+    {
+      "sid": "55",
+      "pkt_count": 109
+    },
+    {
+      "sid": "56",
+      "pkt_count": 89
+    },
+    {
+      "sid": "57",
+      "pkt_count": 100
+    },
+    {
+      "sid": "58",
+      "pkt_count": 95
+    },
+    {
+      "sid": "59",
+      "pkt_count": 91
+    },
+    {
+      "sid": "6",
+      "pkt_count": 89
+    },
+    {
+      "sid": "60",
+      "pkt_count": 88
+    },
+    {
+      "sid": "61",
+      "pkt_count": 91
+    },
+    {
+      "sid": "62",
+      "pkt_count": 86
+    },
+    {
+      "sid": "64",
+      "pkt_count": 91
+    },
+    {
+      "sid": "65",
+      "pkt_count": 105
+    },
+    {
+      "sid": "66",
+      "pkt_count": 102
+    },
+    {
+      "sid": "67",
+      "pkt_count": 94
+    },
+    {
+      "sid": "68",
+      "pkt_count": 90
+    },
+    {
+      "sid": "69",
+      "pkt_count": 101
+    },
+    {
+      "sid": "7",
+      "pkt_count": 101
+    },
+    {
+      "sid": "70",
+      "pkt_count": 89
+    },
+    {
+      "sid": "71",
+      "pkt_count": 94
+    },
+    {
+      "sid": "72",
+      "pkt_count": 93
+    },
+    {
+      "sid": "73",
+      "pkt_count": 99
+    },
+    {
+      "sid": "74",
+      "pkt_count": 96
+    },
+    {
+      "sid": "75",
+      "pkt_count": 88
+    },
+    {
+      "sid": "76",
+      "pkt_count": 104
+    },
+    {
+      "sid": "77",
+      "pkt_count": 97
+    },
+    {
+      "sid": "78",
+      "pkt_count": 94
+    },
+    {
+      "sid": "79",
+      "pkt_count": 100
+    },
+    {
+      "sid": "8",
+      "pkt_count": 107
+    },
+    {
+      "sid": "80",
+      "pkt_count": 85
+    },
+    {
+      "sid": "81",
+      "pkt_count": 87
+    },
+    {
+      "sid": "82",
+      "pkt_count": 93
+    },
+    {
+      "sid": "83",
+      "pkt_count": 91
+    },
+    {
+      "sid": "84",
+      "pkt_count": 102
+    },
+    {
+      "sid": "85",
+      "pkt_count": 102
+    },
+    {
+      "sid": "86",
+      "pkt_count": 99
+    },
+    {
+      "sid": "87",
+      "pkt_count": 101
+    },
+    {
+      "sid": "88",
+      "pkt_count": 100
+    },
+    {
+      "sid": "9",
+      "pkt_count": 104
+    },
+    {
+      "sid": "90",
+      "pkt_count": 88
+    },
+    {
+      "sid": "91",
+      "pkt_count": 95
+    },
+    {
+      "sid": "92",
+      "pkt_count": 95
+    },
+    {
+      "sid": "93",
+      "pkt_count": 87
+    },
+    {
+      "sid": "94",
+      "pkt_count": 98
+    },
+    {
+      "sid": "95",
+      "pkt_count": 94
+    },
+    {
+      "sid": "96",
+      "pkt_count": 87
+    },
+    {
+      "sid": "98",
+      "pkt_count": 92
+    },
+    {
+      "sid": "99",
+      "pkt_count": 92
+    }
+  ],
+  "dropped": [
+    {
+      "sid": "89",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "97",
+      "pkt_count": 14,
+      "reasons": [
+        "too_few_packets(14)"
+      ]
+    }
+  ]
+}

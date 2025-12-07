@@ -1,0 +1,1192 @@
+{
+  "input": "/output/120/session-2025-11-08_17-59-45/raw-172.18.0.3.pcap",
+  "min_packets": 30,
+  "require_serverhello": true,
+  "require_appdata": false,
+  "force_tls_port": "443",
+  "steps": [
+    {
+      "name": "decode-as",
+      "args": [
+        "-d",
+        "tcp.port==443,ssl"
+      ]
+    },
+    {
+      "name": "cmd_clienthellos",
+      "cmd": [
+        "tshark",
+        "-r",
+        "/output/120/session-2025-11-08_17-59-45/raw-172.18.0.3.pcap",
+        "-d",
+        "tcp.port==443,ssl",
+        "-Y",
+        "tls.handshake.type==1",
+        "-T",
+        "fields",
+        "-e",
+        "tcp.stream"
+      ]
+    },
+    {
+      "name": "clienthello_streams",
+      "count": 200,
+      "sample": [
+        "0",
+        "1",
+        "10",
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105",
+        "106",
+        "107",
+        "108",
+        "109",
+        "11",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "115",
+        "116",
+        "117",
+        "118",
+        "119",
+        "12",
+        "120",
+        "121",
+        "122",
+        "123",
+        "124",
+        "125",
+        "126",
+        "127",
+        "128",
+        "129",
+        "13",
+        "130",
+        "131",
+        "132",
+        "133",
+        "134",
+        "135",
+        "136",
+        "137",
+        "138",
+        "139",
+        "14",
+        "140",
+        "141",
+        "142"
+      ]
+    }
+  ],
+  "kept": [
+    {
+      "sid": "1",
+      "pkt_count": 93
+    },
+    {
+      "sid": "10",
+      "pkt_count": 90
+    },
+    {
+      "sid": "101",
+      "pkt_count": 103
+    },
+    {
+      "sid": "102",
+      "pkt_count": 90
+    },
+    {
+      "sid": "104",
+      "pkt_count": 93
+    },
+    {
+      "sid": "106",
+      "pkt_count": 99
+    },
+    {
+      "sid": "108",
+      "pkt_count": 99
+    },
+    {
+      "sid": "111",
+      "pkt_count": 92
+    },
+    {
+      "sid": "112",
+      "pkt_count": 99
+    },
+    {
+      "sid": "114",
+      "pkt_count": 91
+    },
+    {
+      "sid": "116",
+      "pkt_count": 107
+    },
+    {
+      "sid": "118",
+      "pkt_count": 97
+    },
+    {
+      "sid": "12",
+      "pkt_count": 96
+    },
+    {
+      "sid": "120",
+      "pkt_count": 107
+    },
+    {
+      "sid": "123",
+      "pkt_count": 94
+    },
+    {
+      "sid": "124",
+      "pkt_count": 99
+    },
+    {
+      "sid": "127",
+      "pkt_count": 106
+    },
+    {
+      "sid": "129",
+      "pkt_count": 92
+    },
+    {
+      "sid": "130",
+      "pkt_count": 95
+    },
+    {
+      "sid": "132",
+      "pkt_count": 98
+    },
+    {
+      "sid": "134",
+      "pkt_count": 94
+    },
+    {
+      "sid": "137",
+      "pkt_count": 93
+    },
+    {
+      "sid": "139",
+      "pkt_count": 97
+    },
+    {
+      "sid": "14",
+      "pkt_count": 97
+    },
+    {
+      "sid": "140",
+      "pkt_count": 108
+    },
+    {
+      "sid": "142",
+      "pkt_count": 84
+    },
+    {
+      "sid": "145",
+      "pkt_count": 95
+    },
+    {
+      "sid": "146",
+      "pkt_count": 97
+    },
+    {
+      "sid": "149",
+      "pkt_count": 86
+    },
+    {
+      "sid": "150",
+      "pkt_count": 102
+    },
+    {
+      "sid": "153",
+      "pkt_count": 103
+    },
+    {
+      "sid": "154",
+      "pkt_count": 94
+    },
+    {
+      "sid": "156",
+      "pkt_count": 98
+    },
+    {
+      "sid": "158",
+      "pkt_count": 94
+    },
+    {
+      "sid": "16",
+      "pkt_count": 92
+    },
+    {
+      "sid": "160",
+      "pkt_count": 89
+    },
+    {
+      "sid": "162",
+      "pkt_count": 86
+    },
+    {
+      "sid": "164",
+      "pkt_count": 101
+    },
+    {
+      "sid": "167",
+      "pkt_count": 91
+    },
+    {
+      "sid": "168",
+      "pkt_count": 106
+    },
+    {
+      "sid": "170",
+      "pkt_count": 104
+    },
+    {
+      "sid": "173",
+      "pkt_count": 94
+    },
+    {
+      "sid": "174",
+      "pkt_count": 104
+    },
+    {
+      "sid": "177",
+      "pkt_count": 98
+    },
+    {
+      "sid": "178",
+      "pkt_count": 93
+    },
+    {
+      "sid": "18",
+      "pkt_count": 89
+    },
+    {
+      "sid": "180",
+      "pkt_count": 102
+    },
+    {
+      "sid": "183",
+      "pkt_count": 94
+    },
+    {
+      "sid": "185",
+      "pkt_count": 102
+    },
+    {
+      "sid": "187",
+      "pkt_count": 90
+    },
+    {
+      "sid": "188",
+      "pkt_count": 98
+    },
+    {
+      "sid": "191",
+      "pkt_count": 94
+    },
+    {
+      "sid": "192",
+      "pkt_count": 95
+    },
+    {
+      "sid": "194",
+      "pkt_count": 106
+    },
+    {
+      "sid": "197",
+      "pkt_count": 94
+    },
+    {
+      "sid": "198",
+      "pkt_count": 97
+    },
+    {
+      "sid": "2",
+      "pkt_count": 103
+    },
+    {
+      "sid": "20",
+      "pkt_count": 91
+    },
+    {
+      "sid": "22",
+      "pkt_count": 93
+    },
+    {
+      "sid": "25",
+      "pkt_count": 100
+    },
+    {
+      "sid": "26",
+      "pkt_count": 106
+    },
+    {
+      "sid": "29",
+      "pkt_count": 98
+    },
+    {
+      "sid": "31",
+      "pkt_count": 95
+    },
+    {
+      "sid": "32",
+      "pkt_count": 99
+    },
+    {
+      "sid": "34",
+      "pkt_count": 95
+    },
+    {
+      "sid": "36",
+      "pkt_count": 108
+    },
+    {
+      "sid": "38",
+      "pkt_count": 87
+    },
+    {
+      "sid": "4",
+      "pkt_count": 90
+    },
+    {
+      "sid": "41",
+      "pkt_count": 93
+    },
+    {
+      "sid": "42",
+      "pkt_count": 94
+    },
+    {
+      "sid": "44",
+      "pkt_count": 94
+    },
+    {
+      "sid": "46",
+      "pkt_count": 92
+    },
+    {
+      "sid": "49",
+      "pkt_count": 103
+    },
+    {
+      "sid": "50",
+      "pkt_count": 95
+    },
+    {
+      "sid": "52",
+      "pkt_count": 96
+    },
+    {
+      "sid": "54",
+      "pkt_count": 96
+    },
+    {
+      "sid": "57",
+      "pkt_count": 86
+    },
+    {
+      "sid": "58",
+      "pkt_count": 90
+    },
+    {
+      "sid": "60",
+      "pkt_count": 93
+    },
+    {
+      "sid": "63",
+      "pkt_count": 102
+    },
+    {
+      "sid": "64",
+      "pkt_count": 105
+    },
+    {
+      "sid": "67",
+      "pkt_count": 93
+    },
+    {
+      "sid": "68",
+      "pkt_count": 96
+    },
+    {
+      "sid": "7",
+      "pkt_count": 92
+    },
+    {
+      "sid": "70",
+      "pkt_count": 97
+    },
+    {
+      "sid": "72",
+      "pkt_count": 98
+    },
+    {
+      "sid": "74",
+      "pkt_count": 104
+    },
+    {
+      "sid": "76",
+      "pkt_count": 91
+    },
+    {
+      "sid": "78",
+      "pkt_count": 102
+    },
+    {
+      "sid": "80",
+      "pkt_count": 96
+    },
+    {
+      "sid": "82",
+      "pkt_count": 90
+    },
+    {
+      "sid": "84",
+      "pkt_count": 87
+    },
+    {
+      "sid": "87",
+      "pkt_count": 93
+    },
+    {
+      "sid": "89",
+      "pkt_count": 84
+    },
+    {
+      "sid": "9",
+      "pkt_count": 90
+    },
+    {
+      "sid": "90",
+      "pkt_count": 101
+    },
+    {
+      "sid": "92",
+      "pkt_count": 98
+    },
+    {
+      "sid": "94",
+      "pkt_count": 94
+    },
+    {
+      "sid": "96",
+      "pkt_count": 108
+    },
+    {
+      "sid": "99",
+      "pkt_count": 86
+    }
+  ],
+  "dropped": [
+    {
+      "sid": "0",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "100",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "103",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "105",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "107",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "109",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "11",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "110",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "113",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "115",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "117",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "119",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "121",
+      "pkt_count": 13,
+      "reasons": [
+        "too_few_packets(13)"
+      ]
+    },
+    {
+      "sid": "122",
+      "pkt_count": 13,
+      "reasons": [
+        "too_few_packets(13)"
+      ]
+    },
+    {
+      "sid": "125",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "126",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "128",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "13",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "131",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "133",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "135",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "136",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "138",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "141",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "143",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "144",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "147",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "148",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "15",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "151",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "152",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "155",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "157",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "159",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "161",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "163",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "165",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "166",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "169",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "17",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "171",
+      "pkt_count": 14,
+      "reasons": [
+        "too_few_packets(14)"
+      ]
+    },
+    {
+      "sid": "172",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "175",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "176",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "179",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "181",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "182",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "184",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "186",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "189",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "19",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "190",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "193",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "195",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "196",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "199",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "21",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "23",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "24",
+      "pkt_count": 14,
+      "reasons": [
+        "too_few_packets(14)"
+      ]
+    },
+    {
+      "sid": "27",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "28",
+      "pkt_count": 14,
+      "reasons": [
+        "too_few_packets(14)"
+      ]
+    },
+    {
+      "sid": "3",
+      "pkt_count": 14,
+      "reasons": [
+        "too_few_packets(14)"
+      ]
+    },
+    {
+      "sid": "30",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "33",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "35",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "37",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "39",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "40",
+      "pkt_count": 14,
+      "reasons": [
+        "too_few_packets(14)"
+      ]
+    },
+    {
+      "sid": "43",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "45",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "47",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "48",
+      "pkt_count": 14,
+      "reasons": [
+        "too_few_packets(14)"
+      ]
+    },
+    {
+      "sid": "5",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "51",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "53",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "55",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "56",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "59",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "6",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "61",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "62",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "65",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "66",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "69",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "71",
+      "pkt_count": 14,
+      "reasons": [
+        "too_few_packets(14)"
+      ]
+    },
+    {
+      "sid": "73",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "75",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "77",
+      "pkt_count": 17,
+      "reasons": [
+        "too_few_packets(17)"
+      ]
+    },
+    {
+      "sid": "79",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "8",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "81",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "83",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "85",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "86",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "88",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "91",
+      "pkt_count": 13,
+      "reasons": [
+        "too_few_packets(13)"
+      ]
+    },
+    {
+      "sid": "93",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "95",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    },
+    {
+      "sid": "97",
+      "pkt_count": 16,
+      "reasons": [
+        "too_few_packets(16)"
+      ]
+    },
+    {
+      "sid": "98",
+      "pkt_count": 15,
+      "reasons": [
+        "too_few_packets(15)"
+      ]
+    }
+  ]
+}
